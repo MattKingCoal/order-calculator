@@ -1,0 +1,7 @@
+milk:1.99:true
+chocolate:2.89:true
+eggs:5.99:true
+jonnies:7.95:true
+beans:1.26:true
+water:0.99:true
+jonnies:2.35:true
