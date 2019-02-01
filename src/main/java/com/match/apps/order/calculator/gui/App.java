@@ -37,11 +37,11 @@ public class App extends Application {
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("Order calculator");
 
-        List<HBox> tueItemHBoxes = new ArrayList<>();
+        List<HBox> sunItemHBoxes = new ArrayList<>();
         List<HBox> thursItemHBoxes = new ArrayList<>();
         for (Product product : source.loadProducts()) {
             if (product.isActive()) {
-                tueItemHBoxes.add(createItemHBox(product, createIncrementButton(), createDecrementButton()));
+                sunItemHBoxes.add(createItemHBox(product, createIncrementButton(), createDecrementButton()));
                 thursItemHBoxes.add(createItemHBox(product, createIncrementButton(), createDecrementButton()));
             }
         }
@@ -91,9 +91,9 @@ public class App extends Application {
         totalBox.setAlignment(Pos.CENTER);
 
         VBox vbox = new VBox(10);
-        vbox.getChildren().add(new Label("Tuesday"));
+        vbox.getChildren().add(new Label("Sunday"));
         vbox.getChildren().add(tueHheaderBox);
-        vbox.getChildren().addAll(tueItemHBoxes);
+        vbox.getChildren().addAll(sunItemHBoxes);
         vbox.getChildren().add(new Label("Thursday"));
         vbox.getChildren().add(thursHeaderBox);
         vbox.getChildren().addAll(thursItemHBoxes);
